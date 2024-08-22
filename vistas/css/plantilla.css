@@ -1,0 +1,106 @@
+/*=============================================
+GLOBAL
+=============================================*/
+
+*{
+	margin:0px;
+	padding:0px;
+	list-style: none;
+	text-decoration: none;
+	font-family: 'Ubunt', sans-serif;
+}
+
+ul, ol{
+	padding:0px;
+}
+
+a:visited, a:link, a:focus, a:hover, a:active{
+	list-style: none;
+	text-decoration: none;
+}
+
+.barraSuperior{
+	background:black;
+}
+
+.barraSuperior a{
+	color:white;
+}
+
+.backColor, .backColor a{
+	background:#47bac1;
+	color:white;
+}
+
+
+
+/*=============================================
+REDES SOCIALES
+=============================================*/
+
+.redSocial{
+	width:30px;
+	height:30px;
+	text-align: center;
+	line-height:30px;
+}
+
+/*FACEBOOK*/
+
+.facebookBlanco{
+	color:white;
+}
+
+.facebookNegro{
+	color:black;
+}
+
+.facebookColor{
+	color:white;
+	background:#46639f;
+}
+
+/*YOUTUBE*/
+
+.youtubeColor{
+	color:white;
+	background:#d6513e;
+}
+
+.youtubeBlanco{
+	color:white;
+}
+
+.youtubeNegro{
+	color:black;
+}
+
+/*x*/
+
+.twitterColor{
+	color:white;
+}
+
+.twitterBlanco{
+	color:white;
+}
+
+.twitterNegro{
+	color:black;
+}
+
+/*INSTAGRAM*/
+
+.instagramColor{
+	color:white;
+	background:linear-gradient(45deg, #fca925, #ee1d5f,  #6350a2);
+
+}
+
+.instagramBlanco{
+	color:white;
+}
+
+.instagramNegro{
+	color:black;
+}
