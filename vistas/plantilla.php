@@ -35,6 +35,7 @@
     
     <script src="plugins/jquery/jquery.min.js"></script>
     <script src="js/cabezote.js"></script>
+    <script src="js/plantilla.js"></script>
     
     <!-- Bootstrap 4 -->
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>

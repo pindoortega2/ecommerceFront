@@ -16,29 +16,25 @@ TOP
 				
 				<ul>	
 
-					<li>
-						<a href="http://facebook.com/" target="_blank">
-                            <i class="fab fa-facebook-square"></i>
-						</a>
-					</li>
+					<?php
+					
+						$social = ControladorPlantilla::ctrEstiloPlantilla();
 
-					<li>
-						<a href="http://youtube.com/" target="_blank">
-                        <i class="fab fa-youtube youtubeBlanco"></i>
-						</a>
-					</li>
+						$jsonRedesSociales = json_decode($social["redesSociales"], true);						
 
-					<li>
-						<a href="http://twitter.com/" target="_blank">
-                        <i class="fab fa-xing-square twitterBlanco"></i>
-						</a>
-					</li>
+						foreach ($jsonRedesSociales as $key => $value){
+						?>						
+							<li>
+								<a href="<?php echo $value["url"] ?>" target="_blank">
+									<i class="fab <?php echo $value["red"] . " " . $value["estilo"]?> "></i>
+								</a>
+							</li>
+						
+						<?php
 
-					<li>
-						<a href="http://instagram.com/" target="_blank">
-                        <i class="fab fa-instagram-square instagramBlanco"></i>
-						</a>
-					</li>
+						}
+					
+					?>
 
 				</ul>
 
@@ -84,7 +80,7 @@ HEADER
 				
 				<a href="#">
 						
-					<img src="http://localhost/backend/vistas/img/plantilla/logo.png" class="img-responsive">
+					<img src="http://localhost/backend/<?php echo $social["logo"] ?>" class="img-responsive">
 
 				</a>
 				
