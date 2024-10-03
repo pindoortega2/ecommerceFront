@@ -162,87 +162,45 @@ HEADER
 
 		<div class="col-xs-12 backColor" id="categorias">
 
+			<?php
+
+				$columna = null;
+				$valor = null;
+			
+				$categorias = ControladorCategorias::ctrMostrarCategorias($columna, $valor);				
+						
+			?>
+						
 			<div class="interno-categorias">
 			
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-					
-					<h4>
-						<a href="#" class="pixelCategorias">Lorem Ipsum</a>
-					</h4>
-					
-					<hr>
-
-					<ul>
+				<?php
+					foreach ($categorias as $key => $value) {
+								
 						
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-									
-					</ul>
 
-				</div>	
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
 					
-					<h4>
-						<a href="#" class="pixelCategorias">Lorem Ipsum</a>
-					</h4>
-					
-					<hr>
+						echo '<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
+							
+						       	<h4><a href="'.$value["ruta"].'" class="pixelCategorias">'. $value["categoria"] .'</a></h4><hr>	
+															
+							<ul>';
+								
+								$columna = "id_categoria";
+								$valor = $value["id"];
 
-					<ul>
-						
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-									
-					</ul>
+								$subcategoria = ControladorCategorias::ctrMostrarSubCategorias($columna, $valor);
+								foreach ($subcategoria as $key => $value) {
 
-				</div>	
+									echo '<li><a href="'.$value["ruta"].'" class="pixelSubCategorias textsub">'. $value["subcategoria"] .'</a></li>';
 
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-					
-					<h4>
-						<a href="#" class="pixelCategorias">Lorem Ipsum</a>
-					</h4>
-					
-					<hr>
+								}
+		
+							echo '</ul>
 
-					<ul>
-						
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-									
-					</ul>
+						</div>';	
 
-				</div>	
-
-				<div class="col-lg-2 col-md-3 col-sm-4 col-xs-12">
-					
-					<h4>
-						<a href="#" class="pixelCategorias">Lorem Ipsum</a>
-					</h4>
-					
-					<hr>
-
-					<ul>
-						
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-						<li><a href="#" class="pixelSubCategorias">Lorem Ipsum</a></li>
-									
-					</ul>
-
-				</div>
+					}
+				?>
 			
 			</div>
 

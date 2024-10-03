@@ -2,10 +2,11 @@
 
 $.ajax({
 
-    url: "../ajax/plantillaA.php",
+    url: "ajax/plantillaA.php",
     success:function(respuesta) {
 
-        console.log(JSON.parse(respuesta));
+		//console.log(respuesta);
+        //console.log(JSON.parse(respuesta));
 
         var colorFondo = JSON.parse(respuesta).colorFondo;
 		var colorTexto = JSON.parse(respuesta).colorTexto;

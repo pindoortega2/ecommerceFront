@@ -30,6 +30,11 @@ a:visited, a:link, a:focus, a:hover, a:active{
 .backColor, .backColor a{
 	background:#47bac1;
 	color:white;
+	font-size: 15px;
+}
+
+.textsub {
+	font-size: 14px!important;
 }
 
 
@@ -103,4 +108,17 @@ REDES SOCIALES
 
 .instagramNegro{
 	color:black;
+}
+
+
+/*ERROR PÁGUINA  404*/
+
+.text_error404 {
+	text-align: center;
+	font-size: 6rem;
+}
+
+.text_error {
+	text-align: center;
+	font-size: 2rem;
 }

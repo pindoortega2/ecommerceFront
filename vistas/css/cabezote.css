@@ -28,6 +28,13 @@ TOP
 HEADER
 =============================================*/
 
+div#cabezote {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 header #btnCategorias{
 	margin:21px 0;
 }
@@ -70,6 +77,7 @@ header #carrito p{
     padding: 2px 20px 2px 40px;    
     border: 1px solid #aaa;
     font-size: 12px;    
+	text-align: center;
 }
 
 header #categorias{
@@ -105,7 +113,7 @@ Categorias internas
 	.interno-categorias {
 		display: flex;
         justify-content: space-around;
-        align-items: center;
+		align-items: flex-start;
 	}
 }
 
@@ -126,7 +134,7 @@ ESCRITORIO GRANDE (LG revisamos en 1366px en adelante)
 	}
 
 	header #carrito{
-		/* padding-left:100px; */
+		padding-left:100px;
 	}
 
 }
